@@ -1,0 +1,36 @@
+{
+  "name": "明道OA助手",
+  "version": "0.1",
+  "description": "明道OA助手，让你轻松填写报销单",
+  "permissions": [
+    "http://oa.mingdao.com/wf/req/input?applyId=8521",
+    "storage"
+  ],
+  "content_scripts": [{
+      "matches": [
+        "http://oa.mingdao.com/wf/req/input?applyId=8521"
+      ],
+      "js": [
+        "data/js/db.js",
+        "data/js/jquery-2.1.1.min.js",
+        "js/md.ext.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+
+   }],
+  "icons": {
+    "16": "data/img/md16.png",
+    "32": "data/img/md32.png",
+    "48": "data/img/md48.png"
+  },
+  "browser_action": {
+    "default_title": "明道OA助手",
+    "default_popup": "data/popup.html"
+  },
+  "options_page": "data/options.html",
+  "author": "http://liujiacai.net",
+  "homepage_url": "https://github.com/jiacai2050/mingdao.ext",
+  "update_url": "https://github.com/jiacai2050/mingdao.ext/raw/master/updates.xml",
+  "manifest_version": 2
+}

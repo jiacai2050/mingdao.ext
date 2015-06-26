@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>明道OA助手</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/options.css">
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/options.js"></script>
+</head>
+<body>
+
+    <h1>明道OA助手</h1>
+    <h5>让你轻松填写报销单</h5>
+    <div class="nav">
+        <button id="homepage">主页</button>
+        <button id="import">导入</button>
+        <button id="export">导出</button>
+        <input type="file" id="jsonChooser" accept=".json" style="display:none" />
+        <a id="jsonExport" style="display:none" download="md.ext.json"></a>
+    </div>
+
+    <table id="items" class="gridtable" align="center">
+        <thead>
+            <tr>
+                <th>收款人</th>
+                <th>银行</th>    
+                <th>卡号</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"><img src='img/add.png' id='add' title='新增' style='cursor: pointer;'/></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
